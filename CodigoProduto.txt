@@ -1,0 +1,30 @@
+ private void btn_calcular_Click(object sender, EventArgs e)
+        {
+            String Nome;
+            double Peso, ValorProduto, Calculo;
+
+            Nome = textBox1.Text;
+            Peso = Convert.ToDouble(textBox2.Text);
+            ValorProduto = Convert.ToDouble(textBox3.Text);
+            Calculo = Peso * ValorProduto;
+
+            MessageBox.Show(" Calculo do Produto " + Nome + " é R$ " + Calculo);
+        }
+
+        private void btn_Limpar_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
