@@ -1,1 +1,21 @@
 Boa noite Turma
+
+
+ private void btn_calcular_Click(object sender, EventArgs e)
+        {
+            string Nome;
+            double Peso, Valor, Calculo;
+
+            Nome = textBox1.Text;
+            Peso = Convert.ToDouble(textBox2.Text);
+            Valor = Convert.ToDouble(textBox3.Text);
+            Calculo = Valor * Peso;
+            MessageBox.Show("O valor total do Produto " + Nome + " é R$ " + Calculo);
+        }
+
+        private void btn_limpar_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
