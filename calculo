@@ -1,0 +1,43 @@
+int Qte;
+            double Valor, Desconto, ValorTotal;
+            int Escolha;
+
+            for (int i = 1; i < 4; i++)
+            {
+
+                Console.WriteLine("Codigo Fonte Calculo");
+                Console.WriteLine("Opção 1 -Desconto de 10%");
+                Console.WriteLine("Opção 2- Sem desconto");
+                Console.WriteLine("Opção 3- Desconto 15%");
+                Console.WriteLine("Digite a quantidade do Produto");
+                Qte = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o valor do Produto");
+                Valor = double.Parse(Console.ReadLine());
+                Console.WriteLine("Usuario digite a Opção");
+                Escolha = int.Parse(Console.ReadLine());
+
+                switch (Escolha)
+                {
+                    case 1:
+                        ValorTotal = Qte * Valor;
+                        Desconto = ValorTotal - (ValorTotal * 10 / 100.0);
+                        Console.WriteLine(" Valor do produto com Desconto é R$ :" + Desconto);
+                        break;
+
+                    case 2:
+                        ValorTotal = Qte * Valor;
+                        Console.WriteLine("Valor total do Produto é R$: " + ValorTotal);
+                        break;
+
+                    case 3:
+                        ValorTotal = Qte * Valor;
+                        Desconto = ValorTotal - (ValorTotal * 15 / 100.0);
+                        Console.WriteLine(" Valor do produto com Desconto é R$ :" + Desconto);
+                        break;
+
+                    default:
+                        Console.WriteLine(" Opção Invalida, tente novamente!");
+                        break;
+                }
+            }
+            Console.ReadLine();
