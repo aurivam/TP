@@ -1,0 +1,46 @@
+
+double A, B,Resultado;
+            int Opcao;
+
+            Console.WriteLine(" Opção 1 - soma");
+            Console.WriteLine(" Opção 2- Subtração");
+            Console.WriteLine(" Opção 3- Multiplicação");
+            Console.WriteLine(" Opção 4- Divisão");
+            Console.WriteLine(" Informe o valor de A");
+            A = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Informe o valor de B");
+            B = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Usuario escolha a operação");
+            Opcao = int.Parse(Console.ReadLine());
+
+            switch (Opcao)
+            {
+                case 1:
+                    Resultado = A + B;
+                    Console.WriteLine(" A soma dos valores é:" + Resultado);
+                    break;
+
+                case 2:
+                    Resultado = A - B;
+                    Console.WriteLine(" A subtração dos valores é:" + Resultado);
+                    break;
+
+                case 3:
+                    Resultado = A * B;
+                    Console.WriteLine(" A multiplicação dos valores é:" + Resultado);
+                    break;
+
+                case 4:
+                    Resultado = A / B;
+                    Console.WriteLine(" A divisão dos valores é:" + Resultado);
+                    break;
+
+                default:
+                    Console.WriteLine(" Opção invalida");
+                    break;
+            }
+
+
+
+            Console.ReadLine();
