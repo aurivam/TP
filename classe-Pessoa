@@ -1,0 +1,39 @@
+ Pessoa p1 = new Pessoa();
+            Pessoa p2 = new Pessoa();
+
+            for (int i = 0; i < 3; i++)
+            {
+
+                Console.WriteLine("________________________");
+                Console.WriteLine(" Informe o nome da primeira pessoa");
+                p1.Nome = Console.ReadLine();
+                Console.WriteLine(" Informe a idade da primeira pessoa");
+                p1.Idade = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+                Console.WriteLine(" Informe o nome da segunda pessoa");
+                p2.Nome = Console.ReadLine();
+                Console.WriteLine(" Informe a idade da segunda pessoa");
+                p2.Idade = int.Parse(Console.ReadLine());
+
+                if (p1.Idade > p2.Idade)
+                {
+                    Console.WriteLine(p1.Nome + " é a pessoa mais velha");
+                }
+                else
+                {
+                    Console.WriteLine(p2.Nome + " é a pessoa mais velha");
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+
+         
+           class Pessoa
+           {
+    {
+
+        public string Nome;
+        public int Idade;
+    }
+}
