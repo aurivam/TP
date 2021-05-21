@@ -1,0 +1,32 @@
+            Funcionario f1 = new Funcionario();
+            Funcionario f2= new Funcionario();
+
+            Console.WriteLine("Digite o nome do primeiro funcionario");
+            f1.Nome = Console.ReadLine();
+            Console.WriteLine("Digite o salario do primeiro funcionario");
+            f1.Salario = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Digite o nome do segundo funcionario");
+            f2.Nome = Console.ReadLine();
+            Console.WriteLine(" Digite o salario do segundo funcionario");
+            f2.Salario = double.Parse(Console.ReadLine());
+
+            if (f1.Salario > f2.Salario)
+            {
+                Console.WriteLine(f1.Nome + " tem o maior salario R$: " + f1.Salario);
+            }
+            else
+            {
+
+                Console.WriteLine(f2.Nome + " tem o maior salario R$: " + f2.Salario);
+            }
+            Console.ReadLine();
+
+
+           class Funcionario
+    {
+
+        public string Nome;
+        public double Salario;
+    }
+}
