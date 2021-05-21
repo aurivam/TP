@@ -1,0 +1,47 @@
+int Qteaula;
+            double Acrescimo, Valor;
+            int Escolha;
+
+            for (int i = 0; i < 2; i++)
+            {
+
+                Console.WriteLine("Professor 1 	R$12,00 ");
+                Console.WriteLine("Professor 2 	R$17,00");
+                Console.WriteLine("Professor 3 	R$25,00 ");
+
+                Console.WriteLine(" Insira a quantidade de aula ");
+                Qteaula = int.Parse(Console.ReadLine());
+                Console.WriteLine(" Qual é o nivel do professor");
+                Escolha = int.Parse(Console.ReadLine());
+
+                switch (Escolha)
+                {
+                    case 1:
+                        Valor = Qteaula * 12.00;
+                        Acrescimo = Valor + (Valor * 30 / 100.0);
+                        Console.WriteLine("Valor total do professor 1 é :" + Acrescimo);
+                        break;
+
+                    case 2:
+                        Valor = Qteaula * 17.00;
+                        Acrescimo = Valor + (Valor * 30 / 100.0);
+                        Console.WriteLine("Valor total do professor 2 é :" + Acrescimo);
+                        break;
+
+                    case 3:
+                        Valor = Qteaula * 25.00;
+                        Acrescimo = Valor + (Valor * 30 / 100.0);
+                        Console.WriteLine("Valor total do professor 3 é :" + Acrescimo);
+                        break;
+
+                    default:
+                        Console.WriteLine(" Numero Invalido");
+                        break;
+
+                }
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
