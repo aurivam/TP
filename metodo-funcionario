@@ -1,0 +1,27 @@
+           Funcionario a = new Funcionario();
+
+            Console.WriteLine(" Digite o nome do funcionario");
+            a.Nome = Console.ReadLine();
+            Console.WriteLine(" Digite o salario Bruto");
+            a.SalarioBruto = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Digite o imposto do salario");
+            a.Imposto = double.Parse(Console.ReadLine());
+            Console.WriteLine(a.Nome + " tem o salario liquido de R$:" + a.SalarioLiquido());
+            Console.ReadLine();
+            
+            
+            
+            class Funcionario
+    {
+        public string Nome;
+        public double SalarioBruto;
+        public double Imposto;
+        // atributos
+
+        // Método para exibir salario liquido.
+        // salario bruto menos o imposto.
+
+        public double SalarioLiquido()
+        {
+            return SalarioBruto - Imposto;
+        }
