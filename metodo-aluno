@@ -1,0 +1,47 @@
+ Aluno a = new Aluno();
+            Aluno b = new Aluno();
+
+            Console.WriteLine("Informe o nome do primeiro aluno");
+            a.Nome = Console.ReadLine();
+            Console.WriteLine(" Informe a primeira nota ");
+            a.Nota1 = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Informe a segunda nota");
+            a.Nota2 = double.Parse(Console.ReadLine());
+            Console.WriteLine(a.Nome + " tem a nota final de :" + a.NotaFinal());
+            Console.WriteLine(a.Nome + " tem a média de: " + a.Media());
+
+            Console.WriteLine("Informe o nome do segundo aluno");
+            b.Nome = Console.ReadLine();
+            Console.WriteLine(" Informe a primeira nota ");
+            b.Nota1 = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Informe a segunda nota");
+            b.Nota2 = double.Parse(Console.ReadLine());
+            Console.WriteLine(b.Nome + " tem a nota final de :" + b.NotaFinal());
+            Console.WriteLine(b.Nome + " tem a média de: " + b.Media());
+
+            if (a.Media() > b.Media())
+            {
+                Console.WriteLine(a.Nome + " tem a media maior");
+            }
+            else
+            {
+                Console.WriteLine(b.Nome + " tem a media maior");
+            }
+
+            Console.ReadLine();
+
+
+class Aluno
+    {
+        public string Nome;
+        public double Nota1, Nota2;
+
+        public double NotaFinal()
+        {
+            return Nota1 + Nota2;
+        }
+
+        public double Media()
+        {
+            return (Nota1 + Nota2) / 2;
+        }
