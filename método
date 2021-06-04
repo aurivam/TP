@@ -1,0 +1,27 @@
+
+            Conversor c = new Conversor();
+
+            Console.WriteLine(" Usuario, digite a quantidade de dolar");
+            c.Qte = int.Parse(Console.ReadLine());
+            Console.WriteLine(" Usuario, digite a cotação do dolar ");
+            c.Cotacao = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Valor total em RS: " + c.ValorTotal());
+            Console.WriteLine(" Valor de IOF em R$: " + c.IOF());
+            Console.ReadLine();
+            
+            class Conversor
+    {
+
+        public int Qte;
+        public double Cotacao;
+
+        public double ValorTotal()
+        {
+            return Qte * Cotacao;
+        }
+
+        public double IOF()
+        {
+            return Qte * Cotacao * 6 / 100;
+        }
+     }
