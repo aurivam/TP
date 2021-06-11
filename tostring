@@ -1,0 +1,46 @@
+class Program
+    {
+        static void Main(string[] args)
+        
+        {
+            Funcionario a = new Funcionario();
+            Funcionario b = new Funcionario();
+
+            Console.WriteLine(" Digite o nome do funcionario :");
+            a.Nome = Console.ReadLine();
+            Console.WriteLine(" Digite o salario bruto :");
+            a.SalarioBruto = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Digite o imposto pago pelo Funcionario ");
+            a.Imposto = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Dados do Funcionario : " + a);
+            
+            Console.ReadLine();
+
+
+
+            class Funcionario
+    {
+        // atributos da classe funcionario.
+        public string Nome;
+        public double SalarioBruto;
+        public double Imposto;
+
+        // método 
+
+        public double SalarioLiquido()
+        {
+            return SalarioBruto - Imposto;
+        }
+
+        //método tostring
+        public override string ToString()
+        {
+            return Nome
+                + " Salario Bruto de R$: "
+                + SalarioBruto
+                + " , "
+                + " salario Liquido de R$: "
+                + SalarioLiquido();
+        }
+
+    }
